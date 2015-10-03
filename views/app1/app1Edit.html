@@ -1,0 +1,82 @@
+<div class="row row-padding">
+	<div class="col-xs-12 col-sm-12 col-md-12 screen-border">
+		<div class="row inline-btn-top">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<form name="dedupeValidator" novalidate>
+					<div id="dedupeAddConfig">
+						<table class="col-xs-12 col-sm-12 col-md-12" border="0">
+							<thead>
+								<tr>
+									<th>Attributes</th>
+									<th>Select Comparator</th>
+									<th>IsBlockkey</th>
+									<th>No of Char</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="column in dedupe_list">
+									<td data-title="Attributes">{{ column.name }}</td>
+									<td data-title="Select Comparator">
+										<select ng-model="column.type" name="comparator_details" ng-change="changeComparator(column.type,$index)" class="dedupe_select" id="type_{{$index}}">
+											<option value="" ng-selected="!column.type">Select</option>
+											<option value="ID">ID</option>
+											<option value="name">Name</option>
+											<option value="fname">First Name</option>
+											<option value="lname">Last Name</option>
+											<option value="address">Address</option>
+											<option value="address1">Address 1</option>
+											<option value="address2">Address 2</option>
+											<option value="zipcode">Zip Code</option>
+											<option value="email">Email</option>
+											<option value="state">State</option>
+											<option value="country">Country</option>
+											<option value="description">Description</option>
+										</select>
+									</td>
+									<td data-title="IsBlockkey">
+										<div class="checkbox index_chk">
+											<input type="checkbox" name="additional_attributes" ng-model="column.additional_attributes" id="additional_attr_{{$index}}" ng-checked="column.no_of_char" ng-change="changeNoOfChar({{$index}})" ng-disabled="(column.type == '' || column.type == 'ID') "/>
+											<label for="additional_attr_{{$index}}" class="label"><span style="display:none;">&nbsp;</span></label>
+										</div>
+									</td>
+									<td data-title="No of Char">
+										<input type="number" ng-disabled="(!column.additional_attributes || column.type=='')" name="no_of_char" ng-model="column.no_of_char" id="no_of_char_{{$index}}" min="1" max="10" name="number" />
+										<!--<pre>{{column}}</pre>-->
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 threshold">
+								<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+									<label>Threshold Value</label><br/>
+									<input class="form-number-field" id="threshold_val" type="number" ng-model="comparators_list.threshold_val" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" min="0.00" max="1.00" name="threshold_val" validator="decimal,positive,rangecheck"/>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
+									<label>Tolerance</label><br/>
+									<input class="form-number-field" id="tolerance_val" type="number" ng-model="comparators_list.tolerance_val" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" min="0.00" max="1.00" name="tolerance_val" validator="decimal,positive,rangecheck"/>
+									<div id="tolerance_error"></div>
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+									<label>Source Path</label>
+									<input class="" type="text" ng-model="comparators_list.source_path" name="source_path" validator="required" />
+								</div>
+								<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+									<label>Target Path</label>
+									<input class="" type="text" ng-model="comparators_list.target_path" name="target_path" validator="required"/>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-xs-12 col-sm-12 col-md-12">
+								<button type="submit" class="btn btn-primary validationTop" validation-submit="dedupeValidator" ng-click="saveIndex()">Save</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>	
+	

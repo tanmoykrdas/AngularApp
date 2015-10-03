@@ -1,0 +1,82 @@
+	<div class="row" ng-controller="loginController">
+	<nav class="navbar navbar-login-top navbar-fixed-top loginMenu">
+		<div class="navbar-header col-xs-7 col-sm-7 col-md-7">
+			<div class="top-band">
+			
+		</div>
+		</div>
+		
+    </nav>
+	<div>
+		<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 navbar-login-big navbar-window-height">
+		
+		</div>
+		<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 navbar-login-small navbar-window-height">
+			<div class="login-text"></div>
+		</div>
+	</div>
+	<div>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 login-holder">
+			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-3"><span class="blank"></span></div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-6">
+				<!-- login holder -->
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 login-fields">
+					<div class="row">
+						<div class="leftPanel">
+							
+						</div>
+						<div class="rightPanel">
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-12 panelHeading"></div>
+							</div>
+							<form name="loginValidetor" novalidate>
+							<div class="row">
+							<br/><br/>
+							<div class="col-xs-12 col-sm-12 col-md-12">
+							<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-user"></i></span>
+							<input 	type="userName"  
+									ng-model="loginForm.userName" 
+									name="userName" 
+									id="userName" 
+									placeholder="User Name/User Id" 
+									validator="required" 
+									/>
+							</div>
+							</div>
+							<br/><br/><br/>
+							<div class="col-xs-12 col-sm-12 col-md-12" >
+							<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+							<input 	type="password" 
+									class="" 
+									ng-model="loginForm.userPassword" 
+									name="userPassword" 
+									id="userPassword" 
+									placeholder="User Password" 
+									validator="required" 
+									/>
+							</div>
+							</div>
+							
+							</div>
+							<br/>
+							<div class="row">
+								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 inline-btn-top pull-right">
+								<button class="btn btn-primary" type="submit" validation-submit="loginValidetor" ng-click="showAttr()">Login</button>
+								</div>
+							</div>
+							</form>
+							
+							<footer>
+								<p align="left"></p>
+							</footer>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	</div>

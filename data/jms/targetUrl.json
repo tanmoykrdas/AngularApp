@@ -1,0 +1,5 @@
+[
+	{"id":0,"serverUrl":"hdfs/test/data/export.txt","port":"9630","instanceName":"hdfs"},
+	{"id":1,"serverUrl":"hbase/test/data/test-output.xml","port":"8080","instanceName":"hbase"},
+	{"id":2,"serverUrl":"hdfs/test/data/hdfs-export.dat","port":"8080","instanceName":"hbase"}
+]

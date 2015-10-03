@@ -1,0 +1,59 @@
+<div class="row row-padding">
+	<div class="col-xs-12 col-sm-12 col-md-12 screen-border">
+		<div class="row inline-btn-top">
+			<div class="col-xs-12 col-sm-4 col-md-4 row-padding">
+				<div class="col-xs-10 col-sm-10 col-md-10 srch_box">
+					<div angucomplete-alt id="object_s" placeholder="Search..." pause="100" selected-object="dwObjectSelected" local-data="dw_object" search-fields="name, id, price" title-field="name, id, price" minlength="1" input-class="form-control form-control-small typeahead" match-class="">
+					</div>
+				</div>				
+				<i style="color:#336799;" class="fa fa-search fa-lg"></i>
+			</div>	
+		<div class="col-xs-12 col-sm-12 col-md-12">
+				<div id="dedupeListContainer" ng-show="dedupe_list.length > 0" >
+					<div class="col-xs-12 col-sm-12 col-md-12" style="margin-bottom:10px;">
+						<select id="showData" name="showData" class="col-xs-3 col-sm-1 col-md-1">
+							<option value="">All</option>
+							<option value="3">3</option>
+							<option value="5">5</option>
+							<option value="8">8</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+						</select>
+						<br/>&nbsp;&nbsp;<label>Rows in a List</label>
+					</div>
+					<table class="col-xs-12 col-sm-12 col-md-12" border="0">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Execution Date</th>
+								<th>Status</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="column in dedupe_list | filter : paginate">
+								<td data-title="Id">{{ column.name }}</td>
+								<td data-title="Execution Date">
+									{{ column.execution_date }}		
+								</td>
+								<td data-title="Status">
+									{{ column.status }}
+								</td>
+								<td data-title="Action">
+									<a title="Edit" ui-sref="home.Application1edit({rowID:column.id})"><i class="fa fa-pencil-square-o fa-lg"></i></a>
+									<a title="View Details" ui-sref="home.Application1log({jobID:column.id})"><i class="fa fa-file-code-o fa-lg"></i></a>
+									<a title="Run as is" ><i class="fa fa-forward fa-lg"></i></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="msg"></div>
+				<a ui-sref="home.Application1Add({metaName:seletedObj.name})" class="btn btn-primary inline-btn-top" id="newDedupe" ng-show="seletedObj.name != undefined">Create New</a>
+			</div>
+		</div>
+	</div>
+	
+</div>	
+	

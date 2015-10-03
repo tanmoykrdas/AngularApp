@@ -1,0 +1,27 @@
+<div class="row row-padding">
+	<div class="col-xs-12 col-sm-12 col-md-12 screen-border">
+		<div class="row">
+			<div class="col-xs-12 col-sm-4 col-md-4 col-ld-4">
+			<div class="container">	
+				<ul class="nav nav-tabs">
+							<li class="active">
+								<a data-toggle="tab" ng-click="matchedTab()">Matched</a>
+							</li>
+							<li >
+								<a data-toggle="tab" ng-click="nearlyMatchedView()">Near to Match</a>
+							</li>
+							<li >
+								<a data-toggle="tab" ng-click="ignoreMatchedView()">Ignore</a>
+							</li>
+				</ul>
+				<div class="tab-content ">
+					<br/>
+					<span>This Section is out of Demo Scope!</span>
+					<ng-include src = "activeTab"></ng-includ>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>	
+	

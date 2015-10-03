@@ -1,0 +1,68 @@
+<nav class="navbar navbar-login-top navbar-fixed-top">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  <div class="top-band">
+			<span>
+			<img src="images/T_Mobile_logo.png" alt="T-Mobile Logo"/>
+			<span/><span style="color:#E30074;">I</span>ntegrated <span style="color:#E30074;">D</span>ata <span style="color:#E30074;">W</span>arehouse</span></span>
+		  </div>
+        </div>
+        <div style="height: 1px;margin-top:5px;" aria-expanded="false" id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right" style="width:650px;">
+		    <span>
+			<div class="btn-group">
+				<button class="btn btn-primary dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Preparation
+				<span class="caret"></span></button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+				  <li role="presentation"><a ui-sref="#">HTML</a></li>
+				  <li role="presentation"><a ui-sref="#">CSS</a></li>
+				  <li role="presentation"><a ui-sref="#">JavaScript</a></li>
+				  <li role="presentation" class="divider"></li>
+				  <li role="presentation"><a ui-sref="#">About Us</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button class="btn btn-primary dropdown-toggle" type="button" id="menu2" data-toggle="dropdown">Dispatcher
+				<span class="caret"></span></button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="menu2">
+				  <li role="presentation"><a  ui-sref=".dispatcherListView" ng-click="dispatcherScr()">Dispatcher List</a></li>
+				  <li role="presentation"><a  ui-sref=".createDispatcherForm" ng-click="dispatcherScr()">Create Dispatcher</a></li>
+				  <li role="presentation" class="divider"></li>
+				  <li role="presentation"><a  ui-sref=".ftpConfigurationForm" ng-click="dispatcherScr()">FTP Configuration</a></li>
+				  <li role="presentation"><a  ui-sref=".dbConfigurationForm" ng-click="dispatcherScr()">DB Configuration</a></li>
+				  <li role="presentation"><a  ui-sref=".jmsConfigurationForm" ng-click="dispatcherScr()">JMS Configuration</a></li>
+				</ul>
+			</div>
+			<div class="btn-group">
+				<button class="btn btn-primary dropdown-toggle" type="button" id="menu3" data-toggle="dropdown">Search
+				<span class="caret"></span></button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="menu3">
+				  <li role="presentation"><a ui-sref="#">HTML</a></li>
+				  <li role="presentation"><a ui-sref="#">CSS</a></li>
+				  <li role="presentation"><a ui-sref="#">JavaScript</a></li>
+				  <li role="presentation" class="divider"></li>
+				  <li role="presentation"><a ui-sref="#">About Us</a></li>
+				</ul>
+			</div>
+			<!--button class="btn btn-primary" type="button" ng-click="goPreparation()">Preparation</button>
+			<button class="btn btn-primary" type="button" ng-click="goDispatcher()">Dispatcher</button>
+			<button class="btn btn-primary" type="button" ng-click="goSearch()">Search</button-->
+			<span class="pull-right"><span style="color:#6A6A6A;margin-left:5px;margin-right:5px;">Welcome:&nbsp;&nbsp;<i class="fa fa-user fa-lg"></i></span>
+			<div class="btn-group">
+				<button class="btn btn-primary dropdown-toggle" type="button" id="menu4" data-toggle="dropdown">{{UserName}}
+				<span class="caret"></span></button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="menu4">
+				  <li role="presentation"><a role="menuitem" tabindex="-1" ui-sref="#">Change Password</a></li>
+				  
+				  <li role="presentation" class="divider"></li>
+				  <li role="presentation"><a ui-sref=".logout">Logout</a></li>
+				</ul>
+			</div>
+          </form>
+        </div><!--/.navbar-collapse -->
+</nav>

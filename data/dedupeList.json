@@ -1,0 +1,99 @@
+[
+	{	
+		"id":1,
+		"name":"id",
+		"position":1,
+		"type":"Comparator 3",
+		"additional_attributes":true,
+		"no_of_char":4,
+		"execution_date":"20/06/2015",
+		"status":"request received"
+	},
+	{
+		"id":2,
+		"name":"name",
+		"position":2,
+		"execution_date":"24/06/2015",
+		"status":"processing request"
+	},
+	{
+		"id":3,
+		"name":"email",
+		"position":3,
+		"type":"Comparator 1",
+		"additional_attributes":true,
+		"no_of_char":5,
+		"execution_date":"28/06/2015",
+		"status":"response received"
+	},
+	{
+		"id":4,
+		"name":"phone",
+		"position":4,
+		"type":"Comparator 2",
+		"additional_attributes":true,
+		"no_of_char":10,
+		"execution_date":"28/06/2015",
+		"status":"response received"
+	},
+	{
+		"id":5,
+		"name":"Office Address",
+		"position":5,
+		"type":"Comparator 1",
+		"additional_attributes":true,
+		"no_of_char":10,
+		"execution_date":"28/06/2015",
+		"status":"response received"
+	},
+	{
+		"id":6,
+		"name":"Home Address",
+		"position":6,
+		"type":"Comparator 2",
+		"additional_attributes":true,
+		"no_of_char":10,
+		"execution_date":"28/06/2015",
+		"status":"response received"
+	},
+	{
+		"id":7,
+		"name":"Personal E-mail",
+		"position":7,
+		"type":"Comparator 2",
+		"additional_attributes":true,
+		"no_of_char":19,
+		"execution_date":"28/06/2015",
+		"status":"response received"
+	},
+	{
+		"id":8,
+		"name":"Age",
+		"position":8,
+		"type":"Comparator 1",
+		"additional_attributes":true,
+		"no_of_char":19,
+		"execution_date":"28/06/2015",
+		"status":"response received"
+	},
+	{
+		"id":9,
+		"name":"Technical Skill sets",
+		"position":9,
+		"type":"Comparator 1",
+		"additional_attributes":true,
+		"no_of_char":19,
+		"execution_date":"28/06/2015",
+		"status":"response received"
+	},
+	{
+		"id":10,
+		"name":"Language Known",
+		"position":10,
+		"type":"Comparator 1",
+		"additional_attributes":true,
+		"no_of_char":19,
+		"execution_date":"28/06/2015",
+		"status":"response received"
+	}
+]
